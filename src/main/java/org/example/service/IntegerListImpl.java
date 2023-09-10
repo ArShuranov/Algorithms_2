@@ -179,13 +179,17 @@ public class IntegerListImpl implements IntegerList {
     }
 
 // =============== Методы сортировки ===============
+// =============== Methods of sort ===============
 
+
+//util method for replacing elements
     private void swap(IntegerList array, Integer big, Integer little) {
         Integer tmp = array.get(big);
         array.set(big, array.get(little));
         array.set(little, tmp);
     }
 
+//bubble sort
     @Override
     public void bubbleSort(IntegerList unsortedArray) {
         for (int i = 0; i < unsortedArray.size() - 1; i++) {
@@ -198,6 +202,7 @@ public class IntegerListImpl implements IntegerList {
         }
     }
 
+//selection sort
     public void sortSelection(IntegerList unsortedArray) {
         for (int i = 0; i < unsortedArray.size() - 1; i++) {
             int minElementIndex = i;
@@ -210,6 +215,7 @@ public class IntegerListImpl implements IntegerList {
         }
     }
 
+//insertion sort
     public void sortInsertion(IntegerList unsortedArray) {
         for (int i = 1; i < unsortedArray.size(); i++) {
             int temp = unsortedArray.get(i);
@@ -222,7 +228,7 @@ public class IntegerListImpl implements IntegerList {
         }
     }
 
-
+//binary search in sorted array
     public boolean contains(IntegerList sortedArray, Integer element) {
         int min = 0;
         int max = sortedArray.size();

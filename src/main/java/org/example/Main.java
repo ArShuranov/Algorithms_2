@@ -83,6 +83,7 @@ public class Main {
         System.out.println();
 
         // Сортировка методом пузырька
+        // bubble sort
         System.out.println("============== Сортировка методом пузырька ============");
         long start = System.currentTimeMillis();
         listForSort.bubbleSort(listForSort);
@@ -92,6 +93,7 @@ public class Main {
 
 
         // Сортировка выбором
+        //selection sort
         System.out.println("============== Сортировка выбором ============");
         long start2 = System.currentTimeMillis();
         listForSortCopy1.sortSelection(listForSortCopy1);
@@ -101,6 +103,7 @@ public class Main {
 
 
         // Сортировка вставкой
+        //insertion sort
         System.out.println("============== Сортировка вставкой ============");
         long start3 = System.currentTimeMillis();
         listForSortCopy2.sortInsertion(listForSortCopy2);
@@ -109,6 +112,7 @@ public class Main {
         System.out.println();
 
         // бинарный поиск
+        //binary search in sorted array
         System.out.println("============== Бинарный поиск ============");
         System.out.println(listForSort.contains(12));
 
